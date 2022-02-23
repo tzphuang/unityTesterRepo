@@ -32,6 +32,12 @@ public class Player : MonoBehaviour
             RotatePlayerColor();
         }
 
+        //plays the rotation animation attached to the player prefab
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GetComponent<Animator>().Play("Animation_Spin");
+        }
+
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
     }
